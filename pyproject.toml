@@ -1,0 +1,33 @@
+[project]
+name            = "handwriting"
+version         = "0.1.0"
+description     = "Add your description here"
+authors         = [{ name = "aspizu", email = "aspizu@protonmail.com" }]
+dependencies    = ["pillow>=10.3.0"]
+readme          = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires      = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed          = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/handwriting"]
+
+[tool.pyright]
+typeCheckingMode                   = "strict"
+reportUnnecessaryTypeIgnoreComment = true
+reportUnknownVariableType          = false
+reportUnknownMemberType            = false
+reportUnknownArgumentType          = false
+reportMissingModuleSource          = false
+reportMissingTypeStubs             = false
+reportWildcardImportFromLibrary    = false
+reportPrivateUsage                 = false
